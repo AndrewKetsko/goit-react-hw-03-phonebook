@@ -1,9 +1,10 @@
 import React from "react";
+import { Input, Name } from "./FilterField.styled";
 
 const FilterField = ({searchFunc}) => {
         return <>
-            <label htmlFor="search">Find contacts by name</label>
-            <input type="text" name="filter" onInput={searchFunc}/>
+            <Name htmlFor="search">Find contacts by name</Name>
+            <Input type="text" name="filter" onInput={searchFunc}/>
         </>
 };
 

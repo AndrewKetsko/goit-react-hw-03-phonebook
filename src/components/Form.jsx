@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Input } from "./FilterField.styled";
+import { Button, PhoneBook } from "./Form.styled";
 
 class Form extends Component {
 
@@ -17,9 +19,9 @@ class Form extends Component {
 
     // const { submitForm, onFillInput } = this.props;
     render() {return <>
-        <form action="" onSubmit={this.props.submitForm}>
+        <PhoneBook action="" onSubmit={this.props.submitForm}>
             <label htmlFor="name">Name</label>
-            <input
+            <Input
                 type="text"
                 name="name"
                 pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -28,7 +30,7 @@ class Form extends Component {
                 onInput={this.onFillInput}
             />
             <label htmlFor="number">Number</label>
-            <input
+            <Input
                 type="tel"
                 name="number"
                 pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -37,8 +39,8 @@ class Form extends Component {
                 onInput={this.onFillInput}
 
             />
-            <button type="submit">Add contact</button>
-        </form>
+            <Button type="submit">Add contact</Button>
+        </PhoneBook>
     </>}
 }
 

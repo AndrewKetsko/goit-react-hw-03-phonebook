@@ -12,10 +12,9 @@ export default function ContactList({contacts, filter, delFunc}) {
               // console.log(contact.name.includes(this.state.filter));
                 })
                 .map((contact) => {
-              // console.log(contact.id);
-              return <>
-                  <ContactEl contact={contact} delFunc={delFunc} />
-              </>
+              console.log(contact.id);
+              return 
+                  (<ContactEl key={ contact.id } contact={contact} delFunc={delFunc} />)
                 })
             }
         </ul>
