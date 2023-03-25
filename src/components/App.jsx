@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
-import { Form } from "./Form";
-import { FilterField } from "./FilterField";
-import ContactList from "./ContactList";
+import { Form } from "./form/Form";
+import { FilterField } from "./filter/FilterField";
+import ContactList from "./contacts/ContactList";
+import { Header } from "./App.styled";
 
 class App extends Component {
 
@@ -40,11 +41,11 @@ class App extends Component {
 
   render() {
     return <>
-      <h2>PhoneBook</h2>
+      <Header>PhoneBook</Header>
       <Form
         submitForm={this.submitForm}/>
       
-      <h2>Contacts</h2>
+      <Header>Contacts</Header>
       <FilterField
         searchFunc={this.searchFunc} />
         

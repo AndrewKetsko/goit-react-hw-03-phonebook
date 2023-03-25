@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input } from "./FilterField.styled";
+import { Input } from "../filter/FilterField.styled";
 import { Button, PhoneBook } from "./Form.styled";
 
 class Form extends Component {
