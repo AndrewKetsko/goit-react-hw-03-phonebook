@@ -1,16 +1,15 @@
 import React from 'react';
-import { Delete, Card } from './ContactEl.styled';
+import { Delete, Card, Name, Tel } from './ContactEl.styled';
 
 export default function ContactEl({ contact, delFunc }) {
   // console.log(contact.id);
   return (
-    <>
-      <Card data-key={contact.id}>
-        {contact.name}: {contact.number}
-        <Delete type="button" onClick={delFunc}>
-          Delete
-        </Delete>
-      </Card>
-    </>
+    <Card data-key={contact.id}>
+      <Delete type="button" onClick={delFunc}>
+        X
+      </Delete>
+      <Name>{contact.name}:</Name>
+      <Tel> {contact.number}</Tel>
+    </Card>
   );
 }

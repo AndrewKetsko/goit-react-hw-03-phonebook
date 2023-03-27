@@ -16,7 +16,9 @@ export default function ContactList({ contacts, filter, delFunc }) {
           .map(contact => {
             //   console.log(contact.id);
             return (
-              <ContactEl key={contact.id} contact={contact} delFunc={delFunc} />
+              <li key={contact.id}>
+                <ContactEl contact={contact} delFunc={delFunc} />
+              </li>
             );
           })}
       </ul>
