@@ -14,11 +14,8 @@ class Form extends Component {
     // console.log(this.state[e.target.name]);
     e.target.innerHTML = this.state[e.target.name];
     // console.log(this.state[e.target.name]);
-
-
   };
 
-  // const { submitForm, onFillInput } = this.props;
   render() {
     return (
       <>
