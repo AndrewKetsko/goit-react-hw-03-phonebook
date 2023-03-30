@@ -12,7 +12,7 @@ cursor:pointer;
 
 export const Card = styled.div`
 // list-style:none;
-margin-bottom:20px;
+margin-bottom:10px;
 `;
 
 export const Name = styled.span`

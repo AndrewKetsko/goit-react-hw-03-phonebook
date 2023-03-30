@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Input, Name } from './FilterField.styled';
 
 const FilterField = ({ searchFunc }) => {
@@ -11,3 +12,7 @@ const FilterField = ({ searchFunc }) => {
 };
 
 export { FilterField };
+  
+FilterField.propTypes = {
+  searchFunc: PropTypes.func.isRequired
+};

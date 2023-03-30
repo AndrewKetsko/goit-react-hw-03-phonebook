@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContactEl from './ContactEl';
+import { Element, List } from './ContactList.styled';
 
 export default function ContactList({ contacts, filter, delFunc }) {
   return (
     <>
-      <ul>
+      <List>
         {contacts
           .filter(contact => {
             return contact.name.toLowerCase().includes(filter);
@@ -16,12 +18,18 @@ export default function ContactList({ contacts, filter, delFunc }) {
           .map(contact => {
             //   console.log(contact.id);
             return (
-              <li key={contact.id}>
+              <Element key={contact.id}>
                 <ContactEl contact={contact} delFunc={delFunc} />
-              </li>
+              </Element>
             );
           })}
-      </ul>
+      </List>
     </>
   );
-}
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  filter: PropTypes.string.isRequired,
+  delFunc: PropTypes.func.isRequired
+};

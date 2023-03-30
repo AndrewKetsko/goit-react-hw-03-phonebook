@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { Form } from './form/Form';
 import { FilterField } from './filter/FilterField';
 import ContactList from './contacts/ContactList';
-import { Header } from './App.styled';
+import { Container, Header } from './App.styled';
 
 class App extends Component {
   state = {
@@ -61,7 +61,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <Container>
         <Header>PhoneBook</Header>
         <Form submitForm={this.submitForm} />
 
@@ -73,7 +73,7 @@ class App extends Component {
           filter={this.state.filter}
           delFunc={this.delFunc}
         />
-      </>
+      </Container>
     );
   }
 }
